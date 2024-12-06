@@ -64,8 +64,8 @@ export default function Footer() {
             mt={1}
             sx={{ maxWidth: { sm: 230 } }}
           >
-            Bringing the market to your fingertips. Shop smart, shop easy, and
-            discover a world of choices, all in one place!
+            Rishtey connects people to build meaningful relationships and
+            lasting memories.
           </Typography>
           {/* <Stack direction="row" spacing={1} useFlexGap>
             <TextField

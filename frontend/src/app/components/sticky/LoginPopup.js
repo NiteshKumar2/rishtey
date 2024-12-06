@@ -62,7 +62,10 @@ const LoginPopup = ({ open, onClose, handleOpenSignupPopup }) => {
       <Dialog open={open} onClose={onClose} fullWidth maxWidth="xs">
         <DialogTitle>
           Log In
-          <IconButton onClick={onClose} sx={{ position: "absolute", right: 8, top: 8 }}>
+          <IconButton
+            onClick={onClose}
+            sx={{ position: "absolute", right: 8, top: 8 }}
+          >
             <CloseIcon />
           </IconButton>
         </DialogTitle>
@@ -73,7 +76,10 @@ const LoginPopup = ({ open, onClose, handleOpenSignupPopup }) => {
             fullWidth
             value={user.email}
             onChange={(e) => setUser({ ...user, email: e.target.value })}
-            sx={{ textAlign: "center", width: { xs: "90%", sm: "70%", md: "70%" } }}
+            sx={{
+              textAlign: "center",
+              width: { xs: "90%", sm: "70%", md: "70%" },
+            }}
           />
           <Typography
             variant="body2"
@@ -90,14 +96,20 @@ const LoginPopup = ({ open, onClose, handleOpenSignupPopup }) => {
             fullWidth
             value={user.password}
             onChange={(e) => setUser({ ...user, password: e.target.value })}
-            sx={{ textAlign: "center", width: { xs: "90%", sm: "70%", md: "70%" } }}
+            sx={{
+              textAlign: "center",
+              width: { xs: "90%", sm: "70%", md: "70%" },
+            }}
           />
           <Button
             type="submit"
             color="primary"
             variant="contained"
             disabled={buttonDisabled || loading}
-            sx={{ opacity: buttonDisabled || loading ? 0.5 : 1, cursor: buttonDisabled || loading ? "not-allowed" : "pointer" }}
+            sx={{
+              opacity: buttonDisabled || loading ? 0.5 : 1,
+              cursor: buttonDisabled || loading ? "not-allowed" : "pointer",
+            }}
           >
             {loading ? "Logging in..." : "Log In"}
           </Button>
@@ -106,13 +118,17 @@ const LoginPopup = ({ open, onClose, handleOpenSignupPopup }) => {
             color="primary"
             variant="contained"
             fullWidth
-            onClick={() => signIn('google')}
+            onClick={() => signIn("google")}
           >
             Sign in with Google
           </Button>
-          <Typography variant="body2" textAlign="center" onClick={handleOpenSignupPopup} style={{ cursor: "pointer" }}>
-            New to BazarNear?{" "}
-            <span style={{ color: "red" }}>Create account</span>
+          <Typography
+            variant="body2"
+            textAlign="center"
+            onClick={handleOpenSignupPopup}
+            style={{ cursor: "pointer" }}
+          >
+            New to Rishtey? <span style={{ color: "red" }}>Create account</span>
           </Typography>
         </Stack>
       </Dialog>
